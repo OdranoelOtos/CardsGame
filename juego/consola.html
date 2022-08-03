@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Juego</title>
+    <link rel="stylesheet" href="consola_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+</head>
+
+<body>
+    
+    <section class="form-box animated__fadeInUp">
+
+        <form action="machine" class="form-box animated fadeInUp">
+
+            <h1>Machine</h1>
+            <button type="submit" aria-placeholder="Carta_1" autofocus> Carta 1
+                <img src= "/multimedia/Cartas/reverso.jpeg" alt=" "> 
+            </button>
+            <button type="submit" aria-placeholder="Carta_2" autofocus> Carta 2
+                <img src= "/multimedia/Cartas/reverso.jpeg" alt=" "> 
+            </button>
+               
+        </form>
+      
+    </section>
+
+    <section class="form-box animated__fadeInUp">
+        <form action="player" class="form-box animated__fadeInUp"></form>
+            <h1>Player 1</h1>
+            <button type="submit" aria-placeholder="Carta_3" autofocus> Carta 1
+                <img src= "/multimedia/Cartas/reverso.jpeg" alt="carta"> 
+            </button>
+            <button type="submit" aria-placeholder="Carta_4" autofocus> Carta 4
+                <img src= "/multimedia/Cartas/reverso.jpeg" alt="carta"> 
+            </button>
+        </form>
+ 
+    </section>
+
+    <section class="form-box animated__fadeInDown"> 
+        <form action="console" class="form-box animated__fadeInUp">
+            <h1 class="form-title">Game console</h1>
+                <h3>Apuesta</h3>
+                <button type="submit" aria-placeholder="Less" autofocus> Less </button> 
+                <button type="submit" aria-placeholder="More" autofocus> More</button>
+                <h2 class="form-title">SCORE</h2>
+                <h3>Apuesta</h3>
+                    <label>Apuesta</label>
+                    <br>
+                <h3>Saldo Actual</h3>
+                    <label>Total</label>
+                    <br>    
+                <button type="submit" aria-placeholder="jugar" autofocus> PLAY</button>   
+        </form>
+    
+    </section>
+
+        <div class="fondo">
+            <video src="/multimedia/gif_heroes.mp4" alt="" autoplay loop> 
+            <audio src="/multimedia/musica_fondo.mp4" autoplay not-repeat></audio>
+        </div>  
+    
+</body>
+<script src="ultimate.js"></script>
+</html>
