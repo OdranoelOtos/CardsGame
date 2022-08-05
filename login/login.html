@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Log In</title>
-    <link rel="stylesheet" href="/login/login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
-</head>
-
-<body>
-    <form action="index.html" class="form-box animated fadeInUp">
-        <h1 class="form-title">SignIn</h1>
-        <input type="text" placeholder="Player 1" autofocus>
-        <label>"Get 50pts"</label>
-        <button type="submit">
-            Let´s Play!
-        </button>
-    </form>
-</body>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Log In</title>
+        <link rel="stylesheet" href="/login/login.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <script src="/scripts/login.js"></script>
+    </head>
+    <body>
+        <form action="/juego/consola.html?name=name=playerName.value" onsubmit="return validateForm()" class="form-box animated fadeInUp">
+            <h1 class="form-title">Sign In</h1>
+            <input type="text" id="playerName" name="playerName" placeholder="Player 1" autofocus></input>
+            <label>Get 50pts</label>
+            <button id="btnRedirect" type="submit" class="animate__animated animate__flash animate__infinite infinite btn">
+                Let´s play
+            </button>
+        </form>
+    </body>
 </html>
