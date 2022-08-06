@@ -16,3 +16,4 @@ conexion.connect(function(error){
     }
 })
 conexion.end();
+console.log ('leo was here')
