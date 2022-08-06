@@ -13,19 +13,21 @@
 
 <body>
     
-    <section class="form-box animated__fadeInUp">
-        <div class="player">
-            <form  class="form-box animated fadeInUp">
+    <div class="form-box animated__fadeInUp">
+        <div class="machine">
+            <div class="machine form-box animated fadeInUp">
                 <h1>Machine</h1>
-                <button type="submit" aria-placeholder="Carta_1" autofocus> 
+                <br>
+                <div class="marco"> 
                     <img src= "/multimedia/Cartas/reverso.jpeg" alt=" "> 
-                </button>
-                <button type="submit" aria-placeholder="Carta_2" autofocus> 
+                </div>
+                <br>
+                <div class="marco"> 
                     <img src= "/multimedia/Cartas/reverso.jpeg" alt=" "> 
-                </button>
-            </form>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 
     <div class="fondo">
         <video src="/multimedia/gif_heroes.mp4" alt="" autoplay loop> 
@@ -34,35 +36,39 @@
 
     <section class="form-box animated__fadeInUp">
         <div class="player">
-            <form onload="onLoading()" action="player" class="form-box animated__fadeInUp"></form>
-                <h1 id="titulo1"></h1>
-                <button type="submit" aria-placeholder="Carta_3" autofocus> 
+            <form action="player" class="form-box animated__fadeInUp"></form>
+                <h1 id="titulo1">Player1</h1>
+                <br>
+                <button type="submit" aria-placeholder="Carta_1" autofocus> 
                     <img src= "/multimedia/Cartas/reverso.jpeg" alt="carta"> 
                 </button>
-                <button type="submit" aria-placeholder="Carta_4" autofocus> 
+                <br>
+                <button type="submit" aria-placeholder="Carta_2" autofocus> 
                     <img src= "/multimedia/Cartas/reverso.jpeg" alt="carta"> 
                 </button>
             </form>
         </div>
     </section>
-
     <footer class="form-box animated__fadeInDown">
-        <Div class="consola">
-            <form  class="form-box animated__fadeInUp">
-                <h1 class="form-title">Game console</h1>
-                    <h3>Apuesta</h3>
-                    <button type="submit" aria-placeholder="Less" autofocus> Less </button> 
-                    <button type="submit" aria-placeholder="More" autofocus> More</button>
-                    <h2 class="form-title">SCORE</h2>
-                    <h3>Apuesta</h3>
-                        <label>Apuesta</label>
-                        <br>
-                    <h3>Saldo Actual</h3>
-                        <label>Total</label>
-                        <br>    
-                    <button type="submit" aria-placeholder="jugar" autofocus> PLAY</button>   
-            </form>
-        </Div>
+            <Div class="consola">
+                <form action="consola.html" class="form-box animated__fadeInUp">
+                    <h1 class="form-title">Game console</h1>
+                        <h3>Apuesta</h3>
+                        <button type="submit" aria-placeholder="Less" autofocus> Less </button> 
+                        <button type="submit" aria-placeholder="More" autofocus> More </button>
+                        <h2 class="form-title">SCORE</h2>
+                        <h3>Apuesta</h3>
+                            <label>Apuesta</label>
+                            <br>
+                        <h3>Saldo Actual</h3>
+                            <label>Total</label>
+                            <br>    
+                        <button type="submit" aria-placeholder="jugar" autofocus> PLAY </button>   
+                </form>
+            </Div>
     </footer>
 </body>
+
+
+
 </html>

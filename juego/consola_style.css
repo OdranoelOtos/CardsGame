@@ -1,30 +1,44 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 5px;
+    padding: 0px;
   }
   
   body, html {
-      flex-direction: row;
-      display: flex;
-      height: 100%;
-      align-content: space-around;
-      justify-content: space-between;
-      overflow: hidden;
-      
+    flex-direction: row;
+    display: flex;
+    height: 100%;
+    align-content:space-between;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  footer {
+    width: 100vh;
+    position:sticky;
+    display: flex;
+    height: 100%;
+    background-color: purple;
+    border: 2px solid goldenrod;
+    border-radius: 25px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
   }
   
-    .fondo {
-        margin-top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        align-content: center;
-        overflow: hidden;
-        z-index: 0;
-        
-    }
-
+  .fondo {
+    margin-top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.55;
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: -10;
+  }
          
   body {
     margin: 10;
@@ -36,15 +50,49 @@
     align-items:auto;
     overflow: hidden;
   }
+
+  .machine {
+    width: 200px;
+    height: 450px;
+    padding: 5px;
+    background: purple;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    border-radius: 25px;
+  }
+  
+  .marco{
+    background: rgb(2, 85, 2);
+    border: 5px 5px;
+    padding: 5px;
+    border: 2px solid;
+    border-color: goldenrod;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 25px;
+  }
   
   section {
     width: 250px;
-    height: 350px;
-    padding: 25px;
+    height: 450px;
+    padding: 5px;
     background: purple;
+    box-sizing: border-box;
     text-align: center;
     border-radius: 25px;
-      
+  }
+
+  .player {
+    
+  }
+
+  .consola {
+    width: 250px;
+    height: 400px;
+    padding: 5px;
+    text-align: center;
+    
   }
   
   
@@ -67,22 +115,21 @@
   
   }
 
-
   .form-title {
-      color: goldenrod;
-      text-transform: uppercase;
-      font-weight: 500;
+    color: goldenrod;
+    text-transform: uppercase;
+    font-weight: 500;
   }
 
   img {
-    width: 100px;
+    width: 120px;
     height: 150px;
   }
   
   .form-box button[type="submit"] {
       border: 1;
       background: rgb(2, 85, 2);
-      display: inline-block;
+      
       margin: 5px auto;
       text-align: center;
       border: 2px solid goldenrod;
@@ -99,5 +146,18 @@
       color: rgb(2, 85, 2);
       transform: scale(1.2);
   }
+
+  .form-title-h2{
+    text-align: center;
+    font-weight: bolder;
+  }
   
+  h3{
+    text-align: center;
+    color: white;
+  }
+
+  .form-label {
+    background: white;
+  }
   

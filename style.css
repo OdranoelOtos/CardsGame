@@ -60,16 +60,13 @@
     border-color: black;
     font-size: 75px;
     margin-bottom: 0;
-    /*text-shadow: #333 1px;*/
+     
     text-shadow: #fff 2px;
     text-decoration-color: black;
     font-family: 'Lobster', cursive;
     
-      display: inline-block;
-      margin: 0 0.5rem;
-    
-      animation: bounce; /* referring directly to the animation's @keyframe declaration */
-      animation-duration: 3s; /* don't forget to set a duration! */
+    display: inline-block;
+    margin: 0 0.5rem;
     
   }
   
