@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,20 +9,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <script src="/scripts/login.js"></script>
 </head>
- 
 <body>
-    <form onclick="onload()" class="form-box animated fadeInUp">
+        <form action="/juego/consola.html?name=name=playerName.value" onsubmit="return validateForm()" class="form-box animated fadeInUp">
         <h1 class="form-title">SignIn</h1>
-        <input type="text" name="playerName" id="playerName" placeholder="Player 1" autofocus></input>
+            <input type="text" id="playerName" name="playerName" placeholder="Player 1" autofocus></input>
         <br>
-        <label>"Get 50pts"</label>
-        <button type="submit" class="animate__animated animate__flash animate__infinite	infinite btn">
-            <a href="/juego/consola.html?name=playerName.value">Play</a>
+            <label>Get 50pts</label>
+            <button id="btnRedirect" type="submit" class="animate__animated animate__flash animate__infinite infinite btn">
+                Let´s play
         </button>
     </form>
-
     <video src="/multimedia/joker.mp4" alt="" autoplay loop>
 </body>
-
 </html>
 
