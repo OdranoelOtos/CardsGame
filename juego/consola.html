@@ -36,7 +36,7 @@
 
     <section class="form-box animated__fadeInUp">
         <div class="player">
-            <form action="player" class="form-box animated__fadeInUp"></form>
+            <form onload="onLoading()" action="player" class="form-box animated__fadeInUp"></form>
                 <h1 id="titulo1">Player1</h1>
                 <br>
                 <button type="submit" aria-placeholder="Carta_1" autofocus> 
@@ -50,25 +50,22 @@
         </div>
     </section>
     <footer class="form-box animated__fadeInDown">
-            <Div class="consola">
-                <form action="consola.html" class="form-box animated__fadeInUp">
-                    <h1 class="form-title">Game console</h1>
-                        <h3>Apuesta</h3>
-                        <button type="submit" aria-placeholder="Less" autofocus> Less </button> 
-                        <button type="submit" aria-placeholder="More" autofocus> More </button>
-                        <h2 class="form-title">SCORE</h2>
-                        <h3>Apuesta</h3>
-                            <label>Apuesta</label>
-                            <br>
-                        <h3>Saldo Actual</h3>
-                            <label>Total</label>
-                            <br>    
-                        <button type="submit" aria-placeholder="jugar" autofocus> PLAY </button>   
-                </form>
-            </Div>
+        <Div class="consola">
+            <form  class="form-box animated__fadeInUp">
+                <h1 class="form-title">Game console</h1>
+                    <h3>Apuesta</h3>
+                    <button type="submit" aria-placeholder="Less" autofocus> Less </button> 
+                    <button type="submit" aria-placeholder="More" autofocus> More</button>
+                    <h2 class="form-title">SCORE</h2>
+                    <h3>Apuesta</h3>
+                        <label>Apuesta</label>
+                        <br>
+                    <h3>Saldo Actual</h3>
+                        <label>Total</label>
+                        <br>    
+                    <button type="submit" aria-placeholder="jugar" autofocus> PLAY</button>   
+            </form>
+        </Div>
     </footer>
 </body>
-
-
-
 </html>
