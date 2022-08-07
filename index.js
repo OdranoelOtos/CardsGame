@@ -17,9 +17,15 @@ conexion.connect(function(error){
 })
 <<<<<<< .mine
 conexion.end();
+<<<<<<< .mine
+
+||||||| .r15
+console.log ('leo was here')
+=======
 
 console.log ("conectado!");||||||| .r14
 conexion.end();=======
 conexion.end();
 console.log ('leo was here')
 >>>>>>> .r15
+>>>>>>> .r17
