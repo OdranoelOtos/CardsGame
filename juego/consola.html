@@ -12,18 +12,17 @@
 </head>
 
 <body>
-    
     <div class="form-box animated__fadeInUp">
         <div class="machine">
             <div class="machine form-box animated fadeInUp">
                 <h1>Machine</h1>
                 <br>
                 <div class="marco"> 
-                    <img id="Carta1_img" src= "/multimedia/Cartas/reverso.jpeg" alt=" "> 
+                    <img id="idCarta1_img" src= "/multimedia/Cartas/reverso.jpeg" alt=" "> 
                 </div>
                 <br>
                 <div class="marco"> 
-                    <img id="Carta2_img" src= "/multimedia/Cartas/reverso.jpeg" alt=" "> 
+                    <img id="idCarta2_img" src= "/multimedia/Cartas/reverso.jpeg" alt=" "> 
                 </div>
             </div>
         </div>
@@ -39,11 +38,11 @@
             <form onload="onLoading()" action="player" class="form-box animated__fadeInUp"></form>
                 <h1 id="titulo1">Player1</h1>
                 <br>
-                <button type="submit" aria-placeholder="Carta_1" autofocus> 
+                <button id="btnPlayerCarta1" onclick="onClickPlayer('btnPlayerCarta1', 'Carta3_img', 'idCarta1_img')" background="/multimedia/Cartas/reverso.jpeg" type="submit" aria-placeholder="Carta_1" autofocus> 
                     <img id="Carta3_img" src= "/multimedia/Cartas/reverso.jpeg" alt="carta"> 
                 </button>
                 <br>
-                <button type="submit" aria-placeholder="Carta_2" autofocus> 
+                <button id="btnPlayerCarta2" type="submit" onclick="onClickPlayer('btnPlayerCarta2', 'Carta4_img', 'idCarta2_img')" aria-placeholder="Carta_2" autofocus> 
                     <img id="Carta4_img" src= "/multimedia/Cartas/reverso.jpeg" alt="carta"> 
                 </button>
             </form>

@@ -1,7 +1,7 @@
-const Carta1 = "Carta1_img";
-const Carta2 = "Carta2_img";
-const Carta3 = "Carta3_img";
-const Carta4 = "Carta4_img";
+let idCarta1Player;
+let idCarta2Player;
+let idCarta3Machine;
+let idCarta4Machine;
 const Creditos = 50;
 const Resto = 0;
 const Apuesta = 0;
@@ -9,57 +9,174 @@ const Carta1_img = document.getElementById("Carta1_img");
 const Carta2_img = document.getElementById("Carta2_img");
 const Carta3_img = document.getElementById("Carta3_img");
 const Carta4_img = document.getElementById("Carta4_img");
-const result = TotalMachine - TotalPlayer;
-const TotalMachine=(Carta1++Carta2);
-const TotalPlayer = (Carta3++Carta4);
-const ranking = (5 mayores); 
+const TIE = "TIE";
+const WIN = "WIN";
+const LOST = "LOST";
 
+//Se utilizara para mostrar los 5 promedios mayores
+//const ranking = (5 mayores); 
+
+/* 
 Carta3_img.addEventListener("click", () => {
     play(...);
 });
 Carta4_img.addEventListener("click", () => {
     play(...);
-});
+}); 
+*/
 
-function play(Carta3_img) {
-        const number = Math.floor(Math.random() * 54);
-    
-    Carta1_img.src = `multimedia/carta/${Carta1}.jpeg`;
-    userImg.src = `multimedia/carta/${Carta3}.jpeg`;
-    Carta2_img.src = `multimedia/carta/${Carta2}.jpeg`;
-    userImg.src = `multimedia/carta/${Carta4}.jpeg`;
+//INSTALAR NODE
+//Cargar la consulta con el mazo de cartas
+const resultadoMazo = consultarMazo();
 
-        const result = calcResult(TotalMachine, TotalPlayer);
+let valorCard1Player = 0;
+let valorCard2Player = 0;
+let valorCard1Machine = 0;
+let valorCard2Machine = 0;
 
-        switch (result) {
-            case TIE:
-                resultText.innerHTML = "You have tied!";
+let result;
+let totalPlayer = 0;
+let totalMachine = 0;
+
+function onClickPlayer1(btnCartaImg, imgCartaPlayer, imgCartaMachine) {
+    const numberCardPlayer = Math.floor(Math.random() * 54);
+    const numberCardMachine = Math.floor(Math.random() * 54);
+
+    //CARGAR CARTA3 DE PLAYER
+    const Carta3Player_img = document.getElementById(imgCartaPlayer);
+    //Obtener la carta del mazo de acuerdo al id numberCardPlayer
+    var card1Player = buscarCarta(numberCardPlayer);
+    idCarta1Player = card1Player.id;
+    //Carta3Player_img.scr = `multimedia/carta/${ numberCardPlayer }.jpeg`;
+    Carta3Player_img.scr = card1Player.imagen;
+    valorCard1Player = card1Player.valor;
+
+    //Sumo el total del valor de las cartas del jugador
+    totalPlayer += valorCard1Player;
+
+    if (numberCardPlayer == numberCardMachine) {
+        for (var i=1; i<55; i++){
+            i = Math.floor(Math.random() * 54); //3
+            if (i != numberCardMachine) {
                 break;
-            case WIN:
-                resultText.innerHTML = "You win!";
-                break;
-            case LOST:
-                resultText.innerHTML = "You lost!";
-                break;
+            }
         }
-        isPlaying = false;
-    }, 2000;
+        numberCardMachine = i;
+    }
 
+    //CARGAR CARTA3 DE PLAYER
+    const idCarta1_img = document.getElementById(imgCartaMachine);
+    //Obtener la carta del mazo.json de acuerdo al id numberCardMachine
+    var card1Machine;
+    //idCarta1_img.scr = `multimedia/carta/${ numberCardMachine }.jpeg`;
+    valorCard1Machine = card1Machine.valor;
+    
+    //Sumo el total del valor de las cartas de la máquina
+    totalMachine += valorCard1Machine;
 
+    //{"id":"1","carta":"As de tréboles","valor":"1","imagen":"\/multimedia\/cartas\/1.jpg"},
+ 
 
-     {
-        
+    //Carta1_img.src = `multimedia/carta/${number2}.jpeg`;
+    //userImg.src = `multimedia/carta/${number}.jpeg`;
+
+    //Carta2_img.src = `multimedia/carta/${Carta2}.jpeg`;
+    //userImg.src = `multimedia/carta/${Carta4}.jpeg`;
+
+    //SACAR ESTO A UNA FUNCION Q HAGA ONCLICK CUANDO HACE CLICK EN EL BOTON PLAY
+    const result = calcResult(totalMachine, totalPlayer);
+    switch (result) {
+        case TIE:
+            //resultText.innerHTML = "You have tied!";
+            alert("You have tied!");
+            break;
+        case WIN:
+            //resultText.innerHTML = "You win!";
+            alert("You win!");
+            break;
+        case LOST:
+            resultText.innerHTML = "You lost!";
+            alert("You lost!");
+            break;
+    }
 }
 
+function onClickPlayer2(btnCartaImg, imgCartaPlayer, imgCartaMachine) {
+    const numberCardPlayer = Math.floor(Math.random() * 54);
+    const numberCardMachine = Math.floor(Math.random() * 54);
 
-function calcResult(TotalPlayer, TotalMachine) {
-    if (TotalPlayer === TotalMachine) {
+    //CARGAR CARTA3 DE PLAYER
+    const Carta3Player_img = document.getElementById(imgCartaPlayer);
+    //Obtener la carta del mazo de acuerdo al id numberCardPlayer
+    var card1Player = buscarCarta(numberCardPlayer);
+    //Carta3Player_img.scr = `multimedia/carta/${ numberCardPlayer }.jpeg`;
+    Carta3Player_img.scr = card1Player.imagen;
+    valorCard1Player = card1Player.valor;
+
+    //Sumo el total del valor de las cartas del jugador
+    totalPlayer += valorCard1Player;
+
+    if (numberCardPlayer == numberCardMachine) {
+        for (var i=1; i<55; i++){
+            i = Math.floor(Math.random() * 54); //3
+            if (i != numberCardMachine) {
+                break;
+            }
+        }
+        numberCardMachine = i;
+    }
+
+    //CARGAR CARTA3 DE PLAYER
+    const idCarta1_img = document.getElementById(imgCartaMachine);
+    //Obtener la carta del mazo.json de acuerdo al id numberCardMachine
+    var card1Machine;
+    //idCarta1_img.scr = `multimedia/carta/${ numberCardMachine }.jpeg`;
+    valorCard1Machine = card1Machine.valor;
+    
+    //Sumo el total del valor de las cartas de la máquina
+    totalMachine += valorCard1Machine;
+
+    //{"id":"1","carta":"As de tréboles","valor":"1","imagen":"\/multimedia\/cartas\/1.jpg"},
+ 
+
+    //Carta1_img.src = `multimedia/carta/${number2}.jpeg`;
+    //userImg.src = `multimedia/carta/${number}.jpeg`;
+
+    //Carta2_img.src = `multimedia/carta/${Carta2}.jpeg`;
+    //userImg.src = `multimedia/carta/${Carta4}.jpeg`;
+    const result = calcResult(totalMachine, totalPlayer);
+    switch (result) {
+        case TIE:
+            //resultText.innerHTML = "You have tied!";
+            alert("You have tied!");
+            break;
+        case WIN:
+            //resultText.innerHTML = "You win!";
+            alert("You win!");
+            break;
+        case LOST:
+            resultText.innerHTML = "You lost!";
+            alert("You lost!");
+            break;
+    }
+}
+
+function buscarCarta(numberCard){
+    //Obtener la carta del resultadoMazo de acuerdo al id number1CardPlayer
+    const carta = {};
+    // resultadoMazo;
+    carta;
+}
+
+function calcResult(totalPlayer, totalMachine) {
+    if (totalPlayer == totalMachine) {
+        Resto += Apuesta;
         return TIE;
-        Resto = Resto+++(Apuesta/2);
-
-    } else if (TotalPlayer > TotalMachine);
+    } else if (totalPlayer > totalMachine) {
+        Resto = Resto + (Apuesta * 2);
         return WIN;
-        Resto = Resto+++Apuesta;
-        if (TotalPlayer < TotalMachine);
-         return LOST;
-         Resto = Resto--Apuesta;
+    } else { //totalPlayer < totalMachine
+        Resto = Resto - Apuesta;
+        return LOST;
+    }
+}
