@@ -1,16 +1,21 @@
 {
   "name": "proyecto-final-cursada",
   "version": "1.0.0",
-  "description": "",
+  "description": "Proyecto Final cursada Desarrollo Webmaster UTN 2022",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Odranoel",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
     "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "yes"
   }
 }
