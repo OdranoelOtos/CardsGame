@@ -38,11 +38,11 @@
             <form onload="onLoading()" action="player" class="form-box animated__fadeInUp"></form>
                 <h1 id="titulo1">Player1</h1>
                 <br>
-                <button id="btnPlayerCarta1" onclick="onClickPlayer('btnPlayerCarta1', 'Carta3_img', 'idCarta1_img')" background="/multimedia/Cartas/reverso.jpeg" type="submit" aria-placeholder="Carta_1" autofocus> 
+                <button id="btnPlayerCarta1" onclick="onClickPlayer('Carta3_img', 'idCarta1_img')" background="/multimedia/Cartas/reverso.jpeg" type="submit" aria-placeholder="Carta_1" autofocus> 
                     <img id="Carta3_img" src= "/multimedia/Cartas/reverso.jpeg" alt="carta"> 
                 </button>
                 <br>
-                <button id="btnPlayerCarta2" type="submit" onclick="onClickPlayer('btnPlayerCarta2', 'Carta4_img', 'idCarta2_img')" aria-placeholder="Carta_2" autofocus> 
+                <button id="btnPlayerCarta2" type="submit" onclick="onClickPlayer('Carta4_img', 'idCarta2_img')" aria-placeholder="Carta_2" autofocus> 
                     <img id="Carta4_img" src= "/multimedia/Cartas/reverso.jpeg" alt="carta"> 
                 </button>
             </form>
@@ -57,10 +57,10 @@
                     <button type="submit" aria-placeholder="More" autofocus> More</button>
                     <h2 class="form-title">SCORE</h2>
                     <h3>Apuesta</h3>
-                        <label>Apuesta</label>
+                        <label id="idApuesta">Apuesta</label>
                         <br>
                     <h3>Saldo Actual</h3>
-                        <label>Total</label>
+                        <label id="idSaldo">Total</label>
                         <br>    
                     <button onclick="onPlayClick()" type="submit" aria-placeholder="jugar" autofocus> PLAY</button>   
             </form>
