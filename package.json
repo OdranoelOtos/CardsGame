@@ -4,6 +4,7 @@
   "description": "Proyecto Final cursada Desarrollo Webmaster UTN 2022",
   "main": "index.js",
   "scripts": {
+    "start": "cards start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

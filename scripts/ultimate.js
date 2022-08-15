@@ -1,37 +1,39 @@
-var playerName="";
-var url = location.href;
-var creditos = 50;
-var total = 0;
+//const api = require('..api');
+import * as api from '/api/index.js';
 
-//// Variables que vienen de juego.js
-let idCarta1Player;
-let idCarta2Player;
-let idCarta1Machine;
-let idCarta2Machine;
-const Creditos = 50;
-const resto = 0;
-const apuesta = 0;
-//const Carta1_img = document.getElementById("Carta1_img");
-//const Carta2_img = document.getElementById("Carta2_img");
-//const Carta3_img = document.getElementById("Carta3_img");
-//const Carta4_img = document.getElementById("Carta4_img");
+var url = location.href;
+const playerName = "";
 const TIE = "TIE";
 const WIN = "WIN";
 const LOST = "LOST";
 
-//// Esta parte viene de juego.js
-//const resultadoMazo = consultarMazo();
+let idCarta1Player;
+let idCarta2Player;
+let idCarta1Machine;
+let idCarta2Machine;
+const valorCard1Player = 0;
+const valorCard2Player = 0;
+const valorCard1Machine = 0;
+const valorCard2Machine = 0;
+const Creditos = 50;
+const resto = 0;
+const apuesta = 0;
+const creditos = 50;
+const total = 0;
+const result = 0;
+const totalPlayer = 0;
+const totalMachine = 0;
 
-let valorCard1Player = 0;
-let valorCard2Player = 0;
-let valorCard1Machine = 0;
-let valorCard2Machine = 0;
+//const Carta1_img = document.getElementById("Carta1_img");
+//const Carta2_img = document.getElementById("Carta2_img");
+//const Carta3_img = document.getElementById("Carta3_img");
+//const Carta4_img = document.getElementById("Carta4_img");
 
-let result;
-let totalPlayer = 0;
-let totalMachine = 0;
+alert("cargando mazo...");
+const mazo = api.getMazo();
+alert("mazo cargado");
 
-////
+
 function onLoading() {
     //http://localhost:5500/juego/consola.html?name=leo
     //action="machine"
@@ -49,8 +51,6 @@ function onLoading() {
     }
 }
 
-
-//// Viene de juego.js
 function onClickPlayer1(imgCartaPlayer, imgCartaMachine) {
     //Se carga CARD1PLAYER
     const numberCardPlayer = Math.floor(Math.random() * 54);
