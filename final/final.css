@@ -35,6 +35,10 @@ body{
     text-decoration: solid;
 }
 
+.best br{
+    margin: 2rem;
+}
+
 h1{
     box-shadow: 5px white;
     font-size: 5rem solid;
@@ -62,46 +66,38 @@ h6{
     color: rgb(2, 85, 2);
 }
 
-footer{
-    padding: center;
-    display: flex;
-    flex-wrap: wrap 100px;
-    
-}
-.opcion{
-    display: flex;
-    background: purple;
-    border-radius: 5px;
-    border-color: #fff;
-    color: #fff;
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-    text-decoration:double
-}
 
-.header-content a {
-    font-size: 1.5rem;
-    display: block;
-    padding-bottom: auto;
+.final {
+    display: flex;
+    justify-content: space-between;
+
   }
   
-  
-  .btn {
-    background: purple;
+  .items {
+    text-decoration: none;
+    background: grey;
+    color: black;    
+    margin:5px 5px;
+    padding: 2px 2px;
+    text-shadow: #fff 1px 1px;
+    font-size: 1.2rem;    
     border-radius: 5px;
-    border-color: #fff;
-    color: #fff;
-    text-align: center;
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-    text-decoration:double
-    
+    box-shadow: #fff 2px 2px;
   }
 
+.final :hover {
+  background-color: purple;
+  color: goldenrod;
+  border-radius: 50px;
+  transform: scale(1.2);
+  cursor: pointer;
+  z-index: auto;
+}  
 
 @media (max-width: 960px) {
     .content {
       padding: 0 3rem 0 3rem;
+      align-content: center;
     }
   }
 
@@ -109,6 +105,7 @@ footer{
     .content {
       padding: 0;
       margin: 0;
+      align-content: center;
     }
   }
  
