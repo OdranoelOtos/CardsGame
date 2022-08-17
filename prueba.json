@@ -1,0 +1,25 @@
+[
+    {"type":"header","version":"5.2.0","comment":"Export to JSON plugin for PHPMyAdmin"},
+    {"type":"database","name":"none"},
+    {"type":"table","name":"prueba","database":"none","data":
+    [
+    {"player":"Leo","id":"1","carta":"As de tréboles","valor":"1","imagen":"\/multimedia\/cartas\/1.jpg",
+                    "id2":"53","carta2":"joker","valor2":"21","imagen2":"\/multimedia\/cartas\/53.jpg"},
+    
+    {"player":"Osita","id":"2","carta":"2 de tréboles","valor":"2","imagen":"\/multimedia\/cartas\/2.jpg",
+                    "id2":"3","carta2":"3 de tréboles","valor2":"3","imagen2":"\/multimedia\/cartas\/3.jpg"},
+    
+    {"player":"Romi","id":"4","carta":"4 de tréboles","valor":"4","imagen":"\/multimedia\/cartas\/4.jpg",
+                    "id2":"5","carta2":"5 de tréboles","valor2":"5","imagen2":"\/multimedia\/cartas\/5.jpg"},
+
+    {"player":"Romi","id":"6","carta":"6 de tréboles","valor":"6","imagen":"\/multimedia\/cartas\/6.jpg",
+                    "id2":"7","carta2":"7 de tréboles","valor2":"7","imagen2":"\/multimedia\/cartas\/7.jpg"},
+
+    {"player":"Naty","id":"8","carta":"8 de tréboles","valor":"8","imagen":"\/multimedia\/cartas\/8.jpg",
+                    "id2":"9","carta2":"9 de tréboles","valor2":"9","imagen2":"\/multimedia\/cartas\/9.jpg"},
+    
+    {"player":"Vana","id":"8","carta":"8 de tréboles","valor":"8","imagen":"\/multimedia\/cartas\/8.jpg",
+                    "id2":"9","carta2":"9 de tréboles","valor2":"9","imagen2":"\/multimedia\/cartas\/9.jpg"}
+]
+}    
+]
