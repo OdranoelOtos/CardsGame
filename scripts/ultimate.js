@@ -1,4 +1,3 @@
-//const api = require('..api');
 import * as api from '/api/index.js';
 
 var url = location.href;
@@ -35,7 +34,6 @@ alert("mazo cargado");
 
 
 function onLoading() {
-    //http://localhost:5500/juego/consola.html?name=leo
     //action="machine"
     alert("aca MACHINE");
     if (!url == ""){
